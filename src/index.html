@@ -2,11 +2,11 @@
 <html lang="en">
 
   <head>
-    <title>Proton</title>
+    <title>Proton Tasks</title>
     <meta name="author"
           content="Alberto Basalo" />
     <meta name="description"
-          content="Seed TS project." />
+          content="To do list." />
     <meta charset="utf-8" />
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0" />
@@ -30,20 +30,35 @@
     </header>
     <main>
       <nav>
-        <a href="">Page one</a>
-        <a href="">Page two</a>
+        <a href="https://github.com/LabsAdemy/ProtonTasks">Repository</a>
+        <a href="https://github.com/AtomicBuilders/neutron">Based on Proton</a>
       </nav>
       <section>
         <article>
           <header>
             <h2>
-              TypeScript minimal App
+              Add tasks
             </h2>
           </header>
-          <main>Fork this <a
-               href="https://github.com/AtomicBuilders/proton">Repository</a>
+          <main><form action="javascript:void(0);">
+            <label for="new-task">Add Item</label>
+            <input id="new-task" type="text" />
+            <button> ➕ Add task</button>
+          </form>
+          <section>
+            <header>
+              <h3> 📋 Tasks to do</h3>
+            </header>
+            <ul id="incomplete-tasks"></ul>
+          </section>
+          <section>
+            <header>
+              <h3> ✅ Completed tasks</h3>
+            </header>
+            <ul id="completed-tasks"></ul>
+          </section>
           </main>
-          <footer>Use it as a base for web TypeScript projects</footer>
+          <footer>Thanks for using</footer>
         </article>
       </section>
       <aside>
@@ -53,7 +68,7 @@
         <ul>
           <li>HTML5</li>
           <li>Flex-box</li>
-          <li>ES6</li>
+          <li>TS</li>
           <li>Parcel</li>
           <li>Prettier</li>
           <li>Jest</li>

@@ -28,7 +28,7 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "rm -rf dist && parcel build ./src/index.html",
-    "predeploy": "rm -rf dist && parcel build ./src/index.html --public-url /protontasks",
+    "predeploy": "rm -rf dist && parcel build ./src/index.html --public-url /ProtonTasks",
     "deploy": "gh-pages -d dist",
     "test": "jest --watch -o",
     "format": "prettier --write \"./**/*.{js,ts,json}\"",

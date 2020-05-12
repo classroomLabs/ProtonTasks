@@ -27,15 +27,10 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "html.format.wrapAttributes": "force-aligned",
   "html.format.enable": true,
-  "html.format.wrapLineLength": 80,
-  "spellright.language": [
-    "en",
-    "es"
-  ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext",
-    "html"
-  ]
+  "html.format.wrapLineLength": 100,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "spellright.language": ["en", "es"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext", "html"]
 }

@@ -27,7 +27,7 @@ function deleteTask(task_id) {
   return fetch(request);
 }
 
-function createRequest(url, method, payload) {
+function createRequest(url, method, payload?) {
   const request = new Request(url, {
     method: method,
     body: payload ? JSON.stringify(payload) : null,

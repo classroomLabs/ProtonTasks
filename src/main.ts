@@ -79,7 +79,7 @@ function createNewTaskElement(task) {
   deleteButton.className = 'delete';
 
   const taskListItem = document.createElement('li');
-  taskListItem.id = task._id;
+  taskListItem.id = task.id;
   taskListItem.dataset.owner = task.owner;
   taskListItem.appendChild(completedCheckBox);
   taskListItem.appendChild(descriptionLabel);
@@ -108,7 +108,7 @@ function prepareTaskForEdition(descriptionInput, descriptionLabel) {
 function saveEditedTask(taskListItem, descriptionInput, descriptionLabel) {
   const completedCheckBox = taskListItem.querySelector('input[type="checkbox"]');
   const editedTask = {
-    _id: taskListItem.id,
+    id: taskListItem.id,
     completed: completedCheckBox.checked,
     description: descriptionInput.value,
     owner: taskListItem.dataset.owner,
@@ -123,7 +123,7 @@ function markTaskCompleted() {
   const taskListItem = this.parentNode;
   const descriptionLabel = taskListItem.querySelector('label');
   const editedTask = {
-    _id: taskListItem.id,
+    id: taskListItem.id,
     completed: true,
     description: descriptionLabel.value,
     owner: taskListItem.dataset.owner,
@@ -139,7 +139,7 @@ function markTaskIncomplete() {
   const taskListItem = this.parentNode;
   const descriptionLabel = taskListItem.querySelector('label');
   const editedTask = {
-    _id: taskListItem.id,
+    id: taskListItem.id,
     completed: false,
     description: descriptionLabel.value,
     owner: taskListItem.dataset.owner,

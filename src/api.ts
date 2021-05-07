@@ -1,4 +1,4 @@
-const url = 'https://api-base.herokuapp.com/api/pub/tasks/';
+const url = 'https://api-base-21.herokuapp.com/api/pub/tasks/';
 
 export { getAllTasks, getTask, postTask, putTask, deleteTask };
 
@@ -27,7 +27,7 @@ function deleteTask(task_id) {
   return fetch(request);
 }
 
-function createRequest(url, method, payload) {
+function createRequest(url, method, payload?) {
   const request = new Request(url, {
     method: method,
     body: payload ? JSON.stringify(payload) : null,

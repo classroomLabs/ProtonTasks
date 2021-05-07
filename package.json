@@ -1,6 +1,6 @@
 {
   "name": "protontasks",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "TypeScript demo to do list",
   "author": {
     "name": "Alberto Basalo",
@@ -34,7 +34,7 @@
     "format": "prettier --write \"./**/*.{js,ts,json}\"",
     "lint": "eslint . --ext .ts",
     "jest": "jest",
-    "prerelease": "standard-version ",
+    "prerelease": "standard-version",
     "release": "git push --follow-tags origin master",
     "updates": "ncu -u"
   },

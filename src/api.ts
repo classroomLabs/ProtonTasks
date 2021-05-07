@@ -18,7 +18,7 @@ function postTask(task) {
 }
 
 function putTask(task) {
-  const request = createRequest(url + task._id, 'PUT', task);
+  const request = createRequest(url + task.id, 'PUT', task);
   return fetch(request).then(res => res.json());
 }
 

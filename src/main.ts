@@ -119,7 +119,6 @@ function saveEditedTask(taskListItem, descriptionInput, descriptionLabel) {
 }
 
 function markTaskCompleted() {
-  console.log('Task Complete...');
   const taskListItem = this.parentNode;
   const descriptionLabel = taskListItem.querySelector('label');
   const editedTask = {
@@ -128,6 +127,7 @@ function markTaskCompleted() {
     description: descriptionLabel.value,
     owner: taskListItem.dataset.owner,
   };
+  console.log('Task Complete...', editTask);
   putTask(editedTask).then(() => {
     completedTasksHolder.appendChild(taskListItem);
     bindEventsOfTaskElements(taskListItem, markTaskIncomplete);
@@ -135,7 +135,6 @@ function markTaskCompleted() {
 }
 
 function markTaskIncomplete() {
-  console.log('Task Incomplete...');
   const taskListItem = this.parentNode;
   const descriptionLabel = taskListItem.querySelector('label');
   const editedTask = {
@@ -144,6 +143,7 @@ function markTaskIncomplete() {
     description: descriptionLabel.value,
     owner: taskListItem.dataset.owner,
   };
+  console.log('Task Incomplete...', editedTask);
   putTask(editedTask).then(() => {
     incompleteTasksHolder.appendChild(taskListItem);
     bindEventsOfTaskElements(taskListItem, markTaskCompleted);

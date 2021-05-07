@@ -127,7 +127,7 @@ function markTaskCompleted() {
     description: descriptionLabel.value,
     owner: taskListItem.dataset.owner,
   };
-  console.log('Task Complete...', editTask);
+  console.log('Task Complete...', editedTask);
   putTask(editedTask).then(() => {
     completedTasksHolder.appendChild(taskListItem);
     bindEventsOfTaskElements(taskListItem, markTaskIncomplete);
